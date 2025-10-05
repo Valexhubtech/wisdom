@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+[data-theme='light'] {
+  --p: #ffffff;
+  --pc: #000000;
+  --s: #f5f5f5;
+  --sc: #000000;
+  --tc: #666666;
+  --a: #000000;
+  --n: #000000;
+  --b: #e0e0e0;
+  --marquee: #f0f0f0;
+  
+  /* for logo */
+  --gradient-start: #000000;
+  --gradient-mid: #333333;
+  --gradient-end: #666666;
+}
+
+[data-theme='dark'] {
+  --p: #000000;
+  --pc: #ffffff;
+  --s: #111111;
+  --sc: #ffffff;
+  --tc: #cccccc;
+  --a: #ffffff;
+  --n: #ffffff;
+  --b: #333333;
+  --marquee: #222222;
+  
+  /* for logo */
+  --gradient-start: #ffffff;
+  --gradient-mid: #cccccc;
+  --gradient-end: #999999;
+}
+
+@theme {
+  --color-primary: var(--p);
+  --color-primary-content: var(--pc);
+  --color-secondary: var(--s);
+  --color-secondary-content: var(--sc);
+  --color-tertiary-content: var(--tc);
+  --color-accent: var(--a);
+  --color-neutral: var(--n);
+  --color-border: var(--b);
+  --color-marquee: var(--marquee);
+  --color-tag: #888888;
+
+  --animate-fade-in: fade-in 0.5s ease-out 1;
+  --animate-fade-up: fade-up 0.3s ease-out 1;
+
+  --font-fira-code: Fira Code, monospace;
+  --font-inter: Inter, sans-serif;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-up {
+    0% {
+      top: 5px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-border, currentColor);
+  }
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scrollbar-width: none;
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  @apply bg-primary text-primary-content;
+}
+
+section {
+  scroll-margin-top: 1.5rem;
+}
+
+.hide-scrollbar {
+  -webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+}

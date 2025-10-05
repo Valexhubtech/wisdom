@@ -1,12 +1,19 @@
+import Image from 'next/image'
+
 const About = () => {
   return (
     <section id="about" className="pb-4  ">
       <div className="max-w-6xl mx-auto px-4 h-full">
         {/* About Me Section */}
         <div className="mb-8">
+          {/* Mobile: Title on top */}
+          <div className="block md:hidden mb-6">
+            <h2 className="text-2xl font-bold">About Me</h2>
+          </div>
+          
           <div className="flex items-center gap-8">
-            {/* Rotated About Me text */}
-            <div className="flex-shrink-0">
+            {/* Desktop: Rotated About Me text */}
+            <div className="hidden md:flex flex-shrink-0">
               <h2 className="text-2xl md:text-3xl font-bold -rotate-90 origin-center whitespace-nowrap">
                 About Me
               </h2>
@@ -47,7 +54,7 @@ const About = () => {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center gap-3">
-                <img src="https://resume-getnextjs-template.vercel.app/images/icon/lang-icon.svg" alt="Language" width="24" height="24" className="flex-shrink-0" />
+                <Image src="https://resume-getnextjs-template.vercel.app/images/icon/lang-icon.svg" alt="Language" width={24} height={24} className="flex-shrink-0" />
                 <p className="text-sm md:text-base opacity-70">English, Efik</p>
               </div>
             </div>

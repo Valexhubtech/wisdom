@@ -23,9 +23,14 @@ const CoreSkills = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Core Skills Section */}
         <div>
+          {/* Mobile: Title on top */}
+          <div className="block md:hidden mb-6">
+            <h2 className="text-2xl font-bold">Core Skills</h2>
+          </div>
+          
           <div className="flex items-center gap-8">
-            {/* Rotated Core Skills text */}
-            <div className="flex-shrink-0">
+            {/* Desktop: Rotated Core Skills text */}
+            <div className="hidden md:flex flex-shrink-0">
               <h2 className="text-2xl md:text-3xl font-bold -rotate-90 origin-center whitespace-nowrap">
                 Core Skills
               </h2>

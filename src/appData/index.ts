@@ -1,13 +1,13 @@
 // Minimal data structure for blank canvas
 
 // Project Data
-export const projects: any[] = []
+export const projects: unknown[] = []
 
 // Service Data 
-export const serviceData: any[] = []
+export const serviceData: unknown[] = []
 
 // Skill List
-export const skillList: any[] = []
+export const skillList: string[] = []
 
 // Footer Links
 export const footerLinks = [

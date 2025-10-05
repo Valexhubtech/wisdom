@@ -4,9 +4,9 @@ const ContactInfo = () => {
   return (
     <section className="bg-secondary py-8">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Contact Info - Left Side */}
-          <div className="flex items-center gap-6 text-sm opacity-70">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-sm opacity-70">
             <div className="flex items-center gap-2">
               <LocationIcon />
               <span>FCT Abuja Nigeria</span>

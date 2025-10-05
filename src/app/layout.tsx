@@ -11,28 +11,10 @@ const title = 'Wisdom Dominic | Software Engineer & Visual Innovator'
 
 const description = 'Creative Software Engineer and two-time founder with 7+ years of experience in software development, visual arts, and leadership. Delivering scalable digital solutions.'
 
-const url = process.env.NEXT_PUBLIC_SITE_URL
-
 export const metadata: Metadata = {
   title,
   description,
   category: 'technology',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
-  alternates: {
-    canonical: url,
-  },
-  openGraph: {
-    title,
-    description,
-    url,
-    siteName: 'Wisdom Dominic Portfolio',
-    type: 'website',
-  },
-  twitter: {
-    title,
-    description,
-    card: 'summary_large_image',
-  },
 }
 
 export default function RootLayout({
